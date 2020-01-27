@@ -1,0 +1,43 @@
+body
+  background: $body-background
+
+.app-container
+  overflow: hidden
+
+.app-container--fixed
+  position: fixed
+  z-index: 100
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.layout__container
+  @extend .container
+  @media screen and (min-width: $screen-lg-min)
+    max-width: 100%
+    width: auto
+    padding:
+      left: $layout-padding
+      right: $layout-padding
+
+.content-block--sm
+  margin-bottom: $grid-gutter-width
+  @media screen and (max-width: $screen-sm-max)
+    margin-bottom: $grid-gutter-width/2
+
+.content-block
+  margin-bottom: $grid-gutter-width*2
+  @media screen and (max-width: $screen-sm-max)
+    margin-bottom: $grid-gutter-width
+
+.content-block--lg
+  margin-bottom: $grid-gutter-width*4
+  @media screen and (max-width: $screen-sm-max)
+    margin-bottom: $grid-gutter-width*2
+
+.content-block--xl
+  margin-bottom: $grid-gutter-width*6
+  @media screen and (max-width: $screen-sm-max)
+    margin-bottom: $grid-gutter-width*3
+

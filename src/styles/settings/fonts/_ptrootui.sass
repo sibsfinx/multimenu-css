@@ -1,0 +1,13 @@
+// Thin, ExtraLight, Light, Regular, Medium, DemiBold, Bold, Black
+$fonts-rootui: (200 'normal' 'Light', 300 'normal' 'Regular', 400 'normal' 'Medium', 500 normal 'Bold')
+$fonts-rootui-name: 'PT Root UI'
+$fonts-rootui-file-prefix: 'PT Root UI_'
+
+@each $f in $fonts-rootui
+  @font-face
+    font-family: $fonts-rootui-name
+    src: url("../fonts/#{$fonts-rootui-file-prefix}#{nth($f, 3)}.woff2")
+    font-weight: nth($f, 1)
+    font-style: nth($f, 2)
+
+

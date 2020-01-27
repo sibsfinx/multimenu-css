@@ -1,0 +1,32 @@
+$menu__item__bg: #eee
+
+.mm__root
+  display: block
+  width: 100%
+
+.mm__item
+  display: inline-block
+  background-color: $menu__item__bg
+  padding: 10px 15px
+  position: relative
+  cursor: pointer
+  &:hover
+    background-color: #ddd
+  &:focus
+    outline: none
+    box-shadow: none
+    & > .mm__item--sub
+      position: absolute
+      display: block
+      top: inherit
+      left: inherit
+      width: 200px
+      z-index: 1000
+      background-color: #eee
+      //box-shadow: 0 4px 8px rgba(#000, 0.1)
+      .mm__item
+        display: block
+
+.mm__item--sub
+  display: none
+

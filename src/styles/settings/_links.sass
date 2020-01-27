@@ -1,0 +1,38 @@
+%link--uppercase
+  text-transform: uppercase
+  letter-spacing: 0.1em
+
+%link--white
+  &, &:focus
+    color: #fff
+  &:hover
+    color: $c-white
+
+%link--white--underline,
+.link--white--underline
+  &, &:focus
+    color: #fff
+  padding-bottom: 0.1em
+  border-bottom: 1px solid rgba(#fff, 0.7)
+  transition: color 0.3s ease, border 0.3s ease
+  &:hover
+    color: $c-white
+    border-color: $c-white
+
+a
+  color: $link-color
+  transition: color 0.3s ease, border 0.3s ease
+  cursor: pointer
+  &, &:focus, &:hover
+    text-decoration: none
+  &:hover
+    color: $link-hover-color
+
+.link--more
+  font:
+    size: $font-size-small
+    weight: bold
+  text-transform: uppercase
+  letter-spacing: 0.1em
+  &:hover
+    color: $c-blue

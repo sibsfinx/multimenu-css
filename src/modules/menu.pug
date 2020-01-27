@@ -1,0 +1,18 @@
+.mm__root
+  - var i = 0
+  while i < 10
+    .mm__item(tabindex=i)
+      | Item&nbsp;
+      = i++
+      - var k = 0
+      .mm__item--sub(tabindex=(i*i+k))
+        while k < 10
+          .mm__item
+            | Item&nbsp;
+            = k++
+            - var n = 0
+            .mm__item--sub(tabindex=(i*i+k*k+n))
+              while n < 10
+                .mm__item
+                  | Item&nbsp;
+                  = n++
